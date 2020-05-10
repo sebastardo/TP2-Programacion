@@ -40,12 +40,17 @@ void ejercicio(char opcion)
             titulo("Ejercicio 2");
             ejecutarEj02();
             break;
+        case 'C':
+            titulo("Ejercicio 3");
+            ejecutarEj03();
+            break;
         case 'X':
             printf("\n\t\t-----Chau!-----\n");
             break;
         default:
             printf("Nu se\n");
     }
+    printf("\n");
 }
 
 
@@ -54,7 +59,7 @@ void titulo(char *s)
     char tope[] = {201,205,205,205,205,205,205,205,205,205,205,205,205,187,'\0'};
     char piso[] = {200,205,205,205,205,205,205,205,205,205,205,205,205,188,'\0'};
 
-    printf("%s\n", tope);
+    printf("\n%s\n", tope);
     if(strlen(s) == 11)
         printf("%c%s%c%c\n", 186,s,' ',186);
     else

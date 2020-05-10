@@ -19,4 +19,17 @@ void mostrar_inverso(float *, int);
 void ejecutarEj02();
 size_t posicion(int *,int, int);
 
+
+//Ejercicio 03
+typedef struct
+{
+    float promedio;
+    long sumatoria;
+}calculo;
+
+void ejecutarEj03();
+void crearArray_int(int **, int e);
+float promedio_a(int *v, int e, long *s);
+void promedio_b(int *v, int e, calculo *c);
+
 #endif // PROTOEJERCICIOS_H_INCLUDED
