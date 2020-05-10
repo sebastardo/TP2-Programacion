@@ -17,5 +17,6 @@ void mostrar_inverso(float *, int);
 
 //Ejercicio 02
 void ejecutarEj02();
+size_t posicion(int *,int, int);
 
 #endif // PROTOEJERCICIOS_H_INCLUDED
