@@ -5,4 +5,5 @@
 int menu_ejercicios(const char *mensaje, const char *opciones);
 void ejercicio(char opcion);
 
+void titulo(char *);
 #endif // PROTOTIPOS_H_INCLUDED

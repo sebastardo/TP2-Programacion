@@ -33,12 +33,31 @@ void ejercicio(char opcion)
     switch(opcion)
     {
         case 'A':
+            titulo("Ejercicio 1");
             ejecutarEj01();
+            break;
+        case 'B':
+            titulo("Ejercicio 2");
+            ejecutarEj02();
             break;
         case 'X':
             printf("\n\t\t-----Chau!-----\n");
             break;
         default:
-            printf("no se\n");
+            printf("Nu se\n");
     }
+}
+
+
+void titulo(char *s)
+{
+    char tope[] = {201,205,205,205,205,205,205,205,205,205,205,205,205,187,'\0'};
+    char piso[] = {200,205,205,205,205,205,205,205,205,205,205,205,205,188,'\0'};
+
+    printf("%s\n", tope);
+    if(strlen(s) == 11)
+        printf("%c%s%c%c\n", 186,s,' ',186);
+    else
+        printf("%c%s%c\n", 186,s,186);
+    printf("%s\n", piso);
 }
