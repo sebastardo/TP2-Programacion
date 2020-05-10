@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 
-//Ejercicio 01
+///Ejercicio 01
 void ejecutarEj01();
 char menu(const char *mensaje, const char *opciones);
 int crearArray(float **ppvec, int ce);
@@ -15,12 +15,12 @@ float promedio_valores_orden_par(float *, int);
 void mostrar_inverso(float *, int);
 
 
-//Ejercicio 02
+///Ejercicio 02
 void ejecutarEj02();
 size_t posicion(int *,int, int);
 
 
-//Ejercicio 03
+///Ejercicio 03
 typedef struct
 {
     float promedio;
@@ -31,5 +31,12 @@ void ejecutarEj03();
 void crearArray_int(int **, int e);
 float promedio_a(int *v, int e, long *s);
 void promedio_b(int *v, int e, calculo *c);
+
+
+
+///Ejercicio 04
+void ejecutarEj04();
+int atoi_s(const char *str);
+char *itoa_s(int, char *, int);
 
 #endif // PROTOEJERCICIOS_H_INCLUDED
