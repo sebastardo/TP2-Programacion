@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 
+
 ///Ejercicio 01
 void ejecutarEj01();
 char menu(const char *mensaje, const char *opciones);
@@ -38,5 +39,20 @@ void promedio_b(int *v, int e, calculo *c);
 void ejecutarEj04();
 int atoi_s(const char *str);
 char *itoa_s(int, char *, int);
+
+
+///Ejercicio 05
+void ejecutarEj05();
+
+
+///Ejercicio 06
+void ejecutarEj06();
+int comparador(int a, int b);
+void cambiazo(int *a, int *b);
+
+///Ejercicio 07
+enum booleano{falso, verdadero};
+void ejecutarEj07();
+enum booleano abrir_archivo(FILE **f, char *nombre, char *modo);
 
 #endif // PROTOEJERCICIOS_H_INCLUDED

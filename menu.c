@@ -48,6 +48,18 @@ void ejercicio(char opcion)
             titulo("Ejercicio 4");
             ejecutarEj04();
             break;
+        case 'E':
+            titulo("Ejercicio 5");
+            ejecutarEj05();
+            break;
+        case 'F':
+            titulo("Ejercicio 6");
+            ejecutarEj06();
+            break;
+        case 'G':
+            titulo("Ejercicio 7");
+            ejecutarEj07();
+            break;
         case 'X':
             printf("\n\t\t-----Chau!-----\n");
             break;
