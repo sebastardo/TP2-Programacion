@@ -60,6 +60,10 @@ void ejercicio(char opcion)
             titulo("Ejercicio 7");
             ejecutarEj07();
             break;
+        case 'H':
+            titulo("Ejercicio 8");
+            ejecutarEj08();
+            break;
         case 'X':
             printf("\n\t\t-----Chau!-----\n");
             break;

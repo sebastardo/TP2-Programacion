@@ -55,4 +55,16 @@ enum booleano{falso, verdadero};
 void ejecutarEj07();
 enum booleano abrir_archivo(FILE **f, char *nombre, char *modo);
 
+
+///Ejercicio 08
+void ejecutarEj08();
+void reducir_hasta_punto(char *);
+int palabra_mas_larga(const char *, char *);
+int cantidad_palabras(const char *);
+
+int cantidad_repeticiones_palabra_mas_larga(const char *f, const char *p);
+
+
+
+
 #endif // PROTOEJERCICIOS_H_INCLUDED
