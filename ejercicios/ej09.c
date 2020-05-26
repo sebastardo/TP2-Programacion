@@ -19,6 +19,7 @@ void ejecutarEj91011()
     }
 
 
+
     do
     {
         insertar_numero_en_txt(archivoTexto);
@@ -45,35 +46,32 @@ int abrir(FILE **archivo, const char *nombre, const char *modo)
 
 void insertar_numero_en_txt(FILE *archivoTexto)
 {
-    char agregar;
     short int numero;
-    int cantidad = 0;
-    char strNumero[6];
+    int cantidad;
+    char strNumero[7];
+    int coso;
 
 
-    printf("Desea agregar un numero (S/N)?: ");
+    printf("Cantidad de numeros a ingresar: ");
     fflush(stdin);
-    scanf("%c", &agregar);
+    scanf("%d", &cantidad);
 
+    if(cantidad>7)
+        cantidad=7;
 
-    ///TODO: automatizar columnas de ingresos (7 max)
-
-    while(tolower(agregar)=='s' && cantidad<7)
+    coso= cantidad;
+    while(cantidad)
     {
         printf("Ingrese el numero de -32768 a 32767: ");
         fflush(stdin);
         scanf("%d", &numero);
 
+        cantidad--;
         convertir_string(numero, strNumero);
-        //agregar al txt
         fprintf(archivoTexto,strNumero);
 
-        printf("\nAgregar otro numero (S/N)?: ");
-        fflush(stdin);
-        scanf("%c", &agregar);
 
-        cantidad++;
-        if(tolower(agregar)=='s' && cantidad<7)
+        if(cantidad)
         {
             fprintf(archivoTexto," ");
         }
