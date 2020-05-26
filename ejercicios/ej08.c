@@ -6,6 +6,7 @@ void ejecutarEj08()
     char frase[1000];
     char palabra[300];
     int tam_palabra_larga;
+    int repeticiones_palabra_larga;
 
     printf("Ingrese una frase (se toma hasta el primer punto): ");
     fflush(stdin);
@@ -15,7 +16,10 @@ void ejecutarEj08()
     printf("Frase: %s\n", frase);
     tam_palabra_larga = palabra_mas_larga(frase,palabra);
     printf("Palabra mas larga: %s - Largo: %d\n",palabra, tam_palabra_larga);
-    printf("Cantidad de palabras: %d", cantidad_palabras(frase));
+    printf("Cantidad de palabras: %d\n", cantidad_palabras(frase));
+
+    repeticiones_palabra_larga = cantidad_repeticiones_palabra_mas_larga(frase, palabra);
+    printf("Repeticiones de la palabra mas larga: %d", repeticiones_palabra_larga);
 
 
 
@@ -86,17 +90,73 @@ int cantidad_palabras(const char *frase)
             contador++;
             bandera=0;
         }
+        if(*frase=='\0')
+            return contador;
         frase++;
     }
     return contador;
 }
 
 
-int cantidad_repeticiones_palabra_mas_larga(const char *frase, const char *palabra)
+int cantidad_repeticiones_palabra_mas_larga(const char *frase, char *palabra)
 {
-    size_t repeticiones=0;
+    int repeticiones=0;
+    char *inicio = palabra;
 
-    ///TODO
+
+    while(*frase!='\0')
+    {
+        while((*palabra==*frase) && (*palabra!='\0' && *frase!='\0'))
+        {
+            palabra++;
+            frase++;
+        }
+
+        if(*palabra=='\0')
+        {
+            if(*frase==' ')
+            {
+                repeticiones++;
+                palabra=inicio;
+                frase++;
+            }
+            else
+            {
+                if(*frase=='\0')
+                {
+                    repeticiones++;
+                    return repeticiones;
+                }
+                else
+                {
+                    palabra=inicio;
+                    while(*frase!=' ' || *frase!='\0')
+                    {
+                        frase++;
+                    }
+                    frase++;
+                }
+            }
+        }
+        else
+        {
+            if(*frase!='\0')
+            {
+                palabra=inicio;
+                while(*frase!=' ' &&  frase!='\0')
+                {
+                    frase++;
+                }
+                if(*frase=='\0')
+                    return repeticiones;
+                frase++;
+            }
+            else
+            {
+                return repeticiones;
+            }
+        }
+    }
 
     return repeticiones;
 }

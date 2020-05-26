@@ -61,8 +61,7 @@ void ejecutarEj08();
 void reducir_hasta_punto(char *);
 int palabra_mas_larga(const char *, char *);
 int cantidad_palabras(const char *);
-
-int cantidad_repeticiones_palabra_mas_larga(const char *f, const char *p);
+int cantidad_repeticiones_palabra_mas_larga(const char *, char *);
 
 
 
