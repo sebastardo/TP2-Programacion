@@ -1,10 +1,11 @@
 #include "protoejercicios91011.h"
 
-void ejecutarEj91011()
+void ejecutarEj9()
 {
     FILE *archivoTexto;
     char nombre_archivo[100];
     char ingresar;
+    int filas;
 
     printf("Ingrese el nombre del archivo: ");
     fflush(stdin);
@@ -19,17 +20,16 @@ void ejecutarEj91011()
     }
 
 
+    printf("Cantidad de filas a ingresar: ");
+    fflush(stdin);
+    scanf("%d",&filas);
 
-    do
+
+    while(filas)
     {
         insertar_numero_en_txt(archivoTexto);
-
-        /// TODO: automatizar filas de ingresos
-        printf("\nDesea ingresar otra tanda de numeros (S/N)?: ");
-        fflush(stdin);
-        scanf("%c",&ingresar);
-    }while(tolower(ingresar)=='s');
-
+        filas--;
+    }
 
     fclose(archivoTexto);
 }
@@ -60,11 +60,13 @@ void insertar_numero_en_txt(FILE *archivoTexto)
         cantidad=7;
 
     coso= cantidad;
+
     while(cantidad)
     {
-        printf("Ingrese el numero de -32768 a 32767: ");
-        fflush(stdin);
-        scanf("%d", &numero);
+        numero = rand() % 32768;
+
+        if(rand()%2)
+            numero*=-1;
 
         cantidad--;
         convertir_string(numero, strNumero);
