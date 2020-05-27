@@ -14,6 +14,13 @@ void convertir_string(short int numero, char *strNumero);
 
 //EJERCICIO 10
 void ejecutarEj10();
+int capicua(const char *);
+int multiplo5(const char *);
+int multiplo6(const char *);
+int multiplo11(const char *);
+int mayorque100(const char *);
+int mayor_que(const char *, const char *);
+int esShortInt(const char *);
 
 
 #endif // PROTOEJERCICIOS91011_H_INCLUDED
