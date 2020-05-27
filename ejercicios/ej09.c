@@ -14,10 +14,7 @@ void ejecutarEj9()
     strcat(nombre_archivo, ".txt");
 
     if(!abrir(&archivoTexto, nombre_archivo, "wt"))
-    {
-        printf("NOOK");
         return;
-    }
 
 
     printf("Cantidad de filas a ingresar: ");
@@ -40,7 +37,10 @@ int abrir(FILE **archivo, const char *nombre, const char *modo)
     *archivo = fopen(nombre, modo);
 
     if(*archivo==NULL)
+    {
+        fprintf(stderr, "%s\n", "Error");
         return 0;
+    }
     return 1;
 }
 

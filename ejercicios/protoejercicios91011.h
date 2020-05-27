@@ -23,4 +23,9 @@ int mayor_que(const char *, const char *);
 int esShortInt(const char *);
 
 
+//EJERCICIO 10
+void ejecutarEj11();
+int trabajar_linea(char *, char [7][7]);
+
+
 #endif // PROTOEJERCICIOS91011_H_INCLUDED
