@@ -65,5 +65,18 @@ int cantidad_repeticiones_palabra_mas_larga(const char *, char *);
 
 
 
+///Ejercicio 12
+void ejecutarEj12();
+
+///Ejercicio 13
+void ejecutarEj13();
+int abrir13(FILE **, const char *, const char *);
+void editar_archivos(FILE *, FILE *);
+
+
+void armarArchivoParaPruebasEmpleado();
+void armarArchivoParaPruebasEstudiante();
+
+
 
 #endif // PROTOEJERCICIOS_H_INCLUDED
